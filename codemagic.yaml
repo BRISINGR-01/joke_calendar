@@ -57,8 +57,8 @@ workflows:
       # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
       email:
         recipients:
-          - user_1@example.com
-          - user_2@example.com
+          - alexphone33@gmail.com
+          - alp7569@gmail.com
         notify:
           success: true # To receive a notification when a build succeeds
           failure: false # To not receive a notification when a build fails
