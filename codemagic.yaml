@@ -1,6 +1,6 @@
 workflows:
-  instance_type: mac_pro
   my-workflow:
+    instance_type: mac_pro
     environment:
       flutter: beta
       xcode: 12.5
