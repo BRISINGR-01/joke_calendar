@@ -1,6 +1,9 @@
 workflows:
   my-workflow:
     instance_type: mac_pro
+    vars:
+        XCODE_WORKSPACE: "Runner.xcworkspace"
+        XCODE_SCHEME: "Runner"
     environment:
       flutter: beta
       xcode: 12.5
