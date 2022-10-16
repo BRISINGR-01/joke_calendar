@@ -1,5 +1,9 @@
 workflows:
   my-workflow:
+      environment:
+        flutter: beta
+        xcode: 12.5
+    instance_type: mac_pro
     scripts:
       - name: Add provisioning profiles
         script: |
@@ -9,6 +13,7 @@ workflows:
           mkdir -p "$PROFILES_HOME"
           echo ${PROVISIONING_PROFILE?} | base64 --decode > "$PROFILES_HOME/$(uuidgen).mobileprovision"
       - name: Build ipa for distribution
-        script: xcode-project build-ipa
+        script: xcode-project build-ipa \
+                    --workspace "${XCODE_WORKSPACE?}"
     artifacts:
       - build/ios/ipa/*.ipa
