@@ -16,7 +16,9 @@ jobs:
           name: Compile iOS App
           command: flutter build ios --release --no-codesign 
       - store_artifacts:
-          path: build/app.ipa
+          path: /build/
+          destination: app.ipa
+      
 
 workflows:
   version: 2
